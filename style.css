@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*自訂reset*/
+*,*::before,*:after{
+    box-sizing: border-box; 
+}
+.img{
+	max-width: 100%;
+    height: auto;
+	vertical-align: middle;/*移除圖片底部多出的空白*/
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family: 'Bruno Ace SC', cursive , 'sans-serif';
+	background-color: black;
+	line-height: 1.5; /*150%*/
+}
+.container{
+	margin: 0 auto;
+	max-width: 1296px;
+}
+/*全區共通樣式*/
+.topbar,.header,.intro,.about,.about-ol,.contact{
+	display: flex;
+}
+.flex{
+	display: flex;
+}
+.jcsb{
+	display: flex;
+	justify-content: space-between;
+}
+.flex-end{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.color-W{
+	color: white;
+}
+
+h2,h3{
+	font-size: 64px;
+}
+h1{
+	color: #00FFA3;
+	text-align: right;
+	font-size: 128px;
+}
+
+.fs-20{
+	font-size: 20px;
+}
+.fs-24{
+	font-size: 24px;
+}
+
+.Ptb-160{
+	padding: 160px 0;
+}
+
+/*topbar區塊*/
+.topbar{
+	justify-content: space-around;
+	align-items: center;
+	height: 88px;
+}
+.top-li{
+	width: 306px;
+}
+.top-li a{
+	color: white;
+}
+.top-li a:hover{
+	color: #00FFA3;
+}
+
+/*header區塊*/
+.header{
+	padding: 72px 0;
+}
+.header-link{
+	width: 185px;
+	height: 48px;
+	text-align: center;
+	align-items:center;
+	justify-content: center;
+	background: white;
+	border-radius: 20px;
+}
+.header-link a {
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.header-link a:hover{
+	color: #00FFA3;
+}
+.header-link span {
+    margin-left: 0.5em;
+}
+
+/*intro 區塊*/
+.intro-bg{
+	background: url(Rectangle7.png);
+	height: 920px;
+    background-position: center;
+    background-size: cover;
+}
+.intro-container{
+	width: 526px;
+}
+.intro-container h3{
+	margin-bottom: 36px;
+}
+.intro-container p{
+	margin-bottom: 32px;
+}
+.intro-small-img{
+	width: 128px;
+	height: 98px;
+}
+.intro-img{
+	width: 746px;
+}
+
+/*about區塊*/
+.about{
+	justify-content: space-around;
+	align-items: center;
+}
+.about-bg,.project-bg{
+	background-color: white;
+}
+.about,.project{
+	background-color: white;
+}
+.about-ol{
+	width: 652px;
+	height: 320px;
+}
+.ol-div{ /*將about-li分成兩大區塊*/
+	width: 652px;
+	height: 320px;
+	flex-wrap: wrap;
+}
+.about-li{
+	width: 306px;
+	height: 148px;
+	padding: 16px;
+	border: solid 1px rgba(227, 227, 227, 1);
+	box-shadow: 5px 5px 3px rgba(227, 227, 227, 1);
+}
+.about-content{
+	width: 526px;
+}
+.about-content h3{
+	margin-bottom: 36px;
+}
+
+.mr-40{
+	margin-right: 40px;
+}
+/**/
+.contact-bg{
+	background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);
+}
+.contact-link{ /*icon*/
+	font-size: 64px;
+	font-weight: 800;
+	/*為了讓icon置中*/
+	width: 100px;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+}
+.contact{
+	align-items: center;
+	padding: 96px 0;
+}
+.contact-container-img{
+	width: 526px;
+}
+
+.contact-container-img a:hover {
+	background: linear-gradient(180deg, #fff 0%, rgba(1, 2, 30, 0.89) 100%);
+  }
+
+/*project 區塊*/
+.out-pro-h3{ /*多包一層做flex-end*/
+	margin-bottom: 16px;
+}
+.pro-h3{
+	width: 746px;
+}
+.pro-link a {
+	width: 185px;
+	height: 48px;
+	background: black;
+	border-radius: 20px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+    align-items: center;
+    color: white;
+}
+.pro-link a:hover{
+	color: #00FFA3;
+}
+.pro-p-div{
+	width: 636px;
+	flex-direction: column;
+}
+.pro-item-img,.item-div-text img{
+	margin-right: 24px;
+}
+.item-div-text{ /*上方包一起 往下推較方便*/
+	margin-bottom: 28px;
+}
+
+/*footer區塊*/
+.footer{
+	text-align: center;
+	padding: 40px 0;
+}
